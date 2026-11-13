@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-marcellus);
+  --font-caps: var(--font-marcellus);
+  --font-script: var(--font-mea-culpa);
+
+  /* Accents from the icing-drip image (2026-10-28); the logo itself is black on white. */
+  --color-drip-pink: #e8838a;
+  --color-drip-teal: #26c6bc;
+  --color-chocolate: #4a2418;
+  --color-cream: #f7f3ee;
+
+  /* La Patisserie Madras theme (2026-10-28): baby pink primary, teal secondary. White text on brand is
+     for bold button labels only (3.6:1); text in the colour uses brand-strong (5.2:1) or accent-strong
+     (5.1:1). Token names are shared by every screen, so changing them here restyles the whole app. */
+  --color-canvas: #fff6f8;
+  --color-surface: #ffffff;
+  --color-ink: #2b1c20;
+  --color-muted: #7b666b;
+  --color-line: #f5dde3;
+  --color-brand: #e0718a;
+  --color-brand-strong: #b8435f;
+  --color-rose: #f4a6b8;
+  --color-brand-soft: #fde7ec;
+  --color-accent: #26c6bc;
+  --color-accent-strong: #0b7a74;
+  --color-accent-soft: #e0f7f5;
+  --color-danger: #c0392b;
+  --color-danger-soft: #fdecea;
+  --color-warn: #9a6200;
+  --color-warn-soft: #fff4d6;
+  --color-ok: #1f7a4a;
+  --color-ok-soft: #e4f5ea;
+  --color-info: #3b5bab;
+  --color-info-soft: #e8eefb;
+  /* Sticky-note yellow (custom cake details, piece 4) and the script accent. */
+  --color-note: #fff6c4;
+  --color-note-line: #eedf93;
+  --color-script: #b8435f;
+  /* "MADRAS" and its thin rules. */
+  --color-gold: #111111;
+}
+
+body {
+  background:
+    radial-gradient(60rem 30rem at 100% -10%, rgb(38 198 188 / 0.08), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 110%, rgb(244 166 184 / 0.16), transparent 60%),
+    var(--color-canvas);
+  background-attachment: fixed;
+  color: var(--color-ink);
+}
+
+/* In the base layer, so a heading's own font class (font-mono for ticket numbers) still wins. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), Georgia, serif;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}

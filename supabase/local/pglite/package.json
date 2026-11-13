@@ -1,0 +1,8 @@
+{
+  "name": "auri-sql-checks",
+  "private": true,
+  "description": "Runs the SQL rule checks on PGlite (Postgres in Node): no Postgres install, nothing touches the Supabase project.",
+  "type": "module",
+  "scripts": { "test": "node run.mjs" },
+  "dependencies": { "@electric-sql/pglite": "0.5.8" }
+}

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Patisserie Madras — handcrafted cakes, pastries and macarons. Where French elegance meets South Indian soul.">
+    <title>La Patisserie Madras — Artisan Cakes & Pastries</title>
+    <link rel="icon" href="/brand/logo-192.png" type="image/png">
+    <link rel="preload" as="image" href="/brand/drip-bg.webp" type="image/webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="/brand/drip-bg-mobile.webp" type="image/webp" media="(max-width: 768px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Marcellus&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/site/style.css?v=20261028l">
+</head>
+<body>
+
+    <!-- Reading Progress Bar -->
+    <div id="scrollProgress" class="scroll-progress"></div>
+
+    <!-- Cursor sparkle canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">La Patisserie</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Our Story</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+
+                <li><a href="#contact" class="nav-link">Order</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero: the icing drip in layers (drips fall in, the bottom flows, a shine sweeps across) -->
+    <section id="hero">
+        <div class="drip-scene" aria-hidden="true">
+            <div class="drip-layer drip-flow">
+                <div class="drip-flow-strip"><span></span><span class="mirror"></span><span></span><span class="mirror"></span></div>
+            </div>
+            <div class="drip-layer drip-top"></div>
+            <div class="drip-shine"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-card">
+                <h1 class="hero-title">
+                    <img src="/brand/wordmark.svg" alt="La Patisserie Madras" class="hero-wordmark" width="2135" height="770">
+                </h1>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">
+                        <span>Order Now</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/lapatisseriemadras?rpxt=dmR0dmoxbjJkeGhk" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-images" data-animate="fade-right">
+                    <div class="about-img-main">
+                        <img src="/site/images/pastries.jpg" alt="Fresh croissants and pastries" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-img-accent">
+                        <img src="/site/images/macarons.jpg" alt="Colorful French macarons" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-badge-float">
+                        <span class="badge-number">100%</span>
+                        <span class="badge-text">Handcrafted</span>
+                    </div>
+                </div>
+                <div class="about-content" data-animate="fade-left">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title">A Passion for <br><em>Beautiful Cakes</em></h2>
+                    <p class="about-text">At La Patisserie Madras, the art of French baking meets South Indian warmth. Every creation is a love letter — from buttery croissants kissed by morning sun to towering celebration cakes that mark life's sweetest moments.</p>
+                    <p class="about-text">Our master pâtissiers blend time-honored French techniques with locally sourced ingredients, crafting confections that are as breathtaking to behold as they are to taste.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">🌾</div>
+                            <div>
+                                <h4>Premium Ingredients</h4>
+                                <p>Sourced from the finest local and imported suppliers</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👨‍🍳</div>
+                            <div>
+                                <h4>Expert Pâtissiers</h4>
+                                <p>Trained in classical French pastry techniques</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">🎨</div>
+                            <div>
+                                <h4>Artisan Crafted</h4>
+                                <p>Every piece is a handmade work of art</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="section-container">
+            <div class="section-header center" data-animate="fade-up">
+                <span class="section-tag">Our Products</span>
+                <h2 class="section-title">Signature <em>Creations</em></h2>
+                <p class="section-desc">Each masterpiece is handcrafted with passion, precision, and the finest ingredients — a feast for the eyes and the palate.</p>
+            </div>
+
+            <div class="specialties-grid" id="productsGrid">
+                <div class="specialty-card" data-animate="fade-up" data-delay="0">
+                    <div class="card-image">
+                        <img src="/site/images/chocolate.jpg" alt="Dark Chocolate Ganache Cake" loading="lazy" decoding="async">
+                        <div class="card-overlay">
+                            <span class="card-tag">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Cakes</span>
+                            <span class="card-rating">★★★★★</span>
+                        </div>
+                        <h3 class="card-title">Dark Chocolate Ganache</h3>
+                        <p class="card-desc">Layers of rich Belgian dark chocolate sponge, draped in velvety ganache with edible gold leaf and fresh berries.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From ₹1,499</span>
+                            <button class="card-btn">Order →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialty-card" data-animate="fade-up" data-delay="150">
+                    <div class="card-image">
+                        <img src="/site/images/vanilla.jpg" alt="Vanilla Dream Cake" loading="lazy" decoding="async">
+                        <div class="card-overlay">
+                            <span class="card-tag">Popular</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Wedding</span>
+                            <span class="card-rating">★★★★★</span>
+                        </div>
+                        <h3 class="card-title">Vanilla Dream Tower</h3>
+                        <p class="card-desc">An ethereal vanilla bean sponge with Swiss meringue buttercream, adorned with handmade sugar flowers and pearl details.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From ₹2,999</span>
+                            <button class="card-btn">Order →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialty-card" data-animate="fade-up" data-delay="300">
+                    <div class="card-image">
+                        <img src="/site/images/redvelvet.jpg" alt="Red Velvet Cake" loading="lazy" decoding="async">
+                        <div class="card-overlay">
+                            <span class="card-tag">Chef's Pick</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Cakes</span>
+                            <span class="card-rating">★★★★★</span>
+                        </div>
+                        <h3 class="card-title">Red Velvet Royale</h3>
+                        <p class="card-desc">Vibrant crimson layers of moist red velvet cake with luscious cream cheese frosting and white chocolate shavings.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From ₹1,299</span>
+                            <button class="card-btn">Order →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialty-card" data-animate="fade-up" data-delay="100">
+                    <div class="card-image">
+                        <img src="/site/images/macarons.jpg" alt="French Macarons Collection" loading="lazy" decoding="async">
+                        <div class="card-overlay">
+                            <span class="card-tag">Gift Box</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Macarons</span>
+                            <span class="card-rating">★★★★★</span>
+                        </div>
+                        <h3 class="card-title">Parisian Macaron Box</h3>
+                        <p class="card-desc">A curated box of 12 artisan French macarons in seasonal flavours — from rose pistachio to salted caramel.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From ₹899</span>
+                            <button class="card-btn">Order →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialty-card" data-animate="fade-up" data-delay="250">
+                    <div class="card-image">
+                        <img src="/site/images/pastries.jpg" alt="Butter Croissants" loading="lazy" decoding="async">
+                        <div class="card-overlay">
+                            <span class="card-tag">Morning Fav</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Pastries</span>
+                            <span class="card-rating">★★★★★</span>
+                        </div>
+                        <h3 class="card-title">Butter Croissant Bundle</h3>
+                        <p class="card-desc">Flaky, golden, and impossibly buttery — our 36-layer croissants are laminated by hand over three days.</p>
+                        <div class="card-footer">
+                            <span class="card-price">From ₹199</span>
+                            <button class="card-btn">Order →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="specialty-card specialty-cta" data-animate="fade-up" data-delay="400">
+                    <div class="cta-inner">
+                        <span class="cta-emoji">🎂</span>
+                        <h3>Custom Creations</h3>
+                        <p>Dream it, and we'll bake it. Let our pâtissiers bring your vision to life for any occasion.</p>
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>✦ Freshly Baked Daily</span>
+                <span>✦ Premium Ingredients</span>
+                <span>✦ Made with Love</span>
+                <span>✦ French Techniques</span>
+                <span>✦ Custom Orders Welcome</span>
+                <span>✦ Eggless Options Available</span>
+                <span>✦ Freshly Baked Daily</span>
+                <span>✦ Premium Ingredients</span>
+                <span>✦ Made with Love</span>
+                <span>✦ French Techniques</span>
+                <span>✦ Custom Orders Welcome</span>
+                <span>✦ Eggless Options Available</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-container">
+            <div class="section-header center" data-animate="fade-up">
+                <span class="section-tag">Gallery</span>
+                <h2 class="section-title">Sweet <em>Moments</em></h2>
+                <p class="section-desc">A glimpse into the world of La Patisserie Madras — where every creation tells a story.</p>
+            </div>
+            <div class="gallery-grid" data-animate="fade-up">
+                <div class="gallery-item gi-1">
+                    <img src="/site/images/hero.jpg" alt="Patisserie display" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Our Atelier</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-2">
+                    <img src="/site/images/chocolate.jpg" alt="Chocolate cake" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Chocolate Bliss</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-3">
+                    <img src="/site/images/macarons.jpg" alt="Macarons" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Macaron Art</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-4">
+                    <img src="/site/images/vanilla.jpg" alt="Vanilla cake" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Vanilla Elegance</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-5">
+                    <img src="/site/images/redvelvet.jpg" alt="Red velvet" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Red Velvet Love</span>
+                    </div>
+                </div>
+                <div class="gallery-item gi-6">
+                    <img src="/site/images/pastries.jpg" alt="Pastries" loading="lazy" decoding="async">
+                    <div class="gallery-hover">
+                        <span>Morning Pastries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Reviews (approved in the admin; the list is hidden until there are some) -->
+    <section id="testimonials">
+        <div class="section-container">
+            <div class="section-header center" data-animate="fade-up">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">Sweet <em>Words</em></h2>
+                <p class="section-desc">What our customers say about us.</p>
+            </div>
+            <div id="reviewsList" hidden>
+                <div class="testimonials-slider">
+                    <div class="testimonials-track" id="testimonialsTrack"></div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn" aria-label="Previous review">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn" id="nextBtn" aria-label="Next review">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <form class="review-form" id="reviewForm" novalidate>
+                <h3 class="form-title">Share your experience</h3>
+                <fieldset class="review-stars" id="reviewStars">
+                    <legend>Your rating</legend>
+                    <div class="star-row">
+                    <input type="radio" name="rating" id="star5" value="5"><label for="star5" title="5 stars">★</label>
+                    <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="4 stars">★</label>
+                    <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="3 stars">★</label>
+                    <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="2 stars">★</label>
+                    <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="1 star">★</label>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <input type="text" id="reviewName" placeholder=" " maxlength="60" autocomplete="name">
+                    <label for="reviewName">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="reviewComment" rows="3" placeholder=" " maxlength="600"></textarea>
+                    <label for="reviewComment">Your review</label>
+                </div>
+                <div class="form-hp" aria-hidden="true">
+                    <label for="reviewWebsite">Leave this empty</label>
+                    <input type="text" id="reviewWebsite" tabindex="-1" autocomplete="off">
+                </div>
+                <p class="form-status" id="reviewStatus" role="status" aria-live="polite" hidden></p>
+                <button type="submit" class="btn btn-primary btn-full"><span>Send Review</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <span class="section-tag">Order</span>
+                    <h2 class="section-title">Say <em>Hello!</em></h2>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Every Day (Mon – Sun): 10:00 – 20:00<br>(10:00 AM – 8:00 PM)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Get in Touch</h4>
+                                <p><a href="tel:+919884882516">+91 98848 82516</a><br><a href="mailto:lapatisseriemadras@gmail.com">lapatisseriemadras@gmail.com</a></p>
+                                <address class="contact-address"><a href="https://www.google.com/maps?q=La+Patisserie+Madras,+Bharath+Nagar+Extn,+7,+Water+Canal+Rd,+near+ALLIANCE+ORCHID+SPRINGS,+apratment,+Korattur,+Chennai,+Tamil+Nadu+600099&amp;ftid=0x3a526514eea2d4bf:0x8dad3cd69f9d7773" target="_blank" rel="noopener noreferrer">Bharath Nagar Extn, 7, Water Canal Rd, near Alliance Orchid Springs Apartment, Korattur, Chennai, Tamil Nadu 600099</a></address>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/lapatisseriemadras?rpxt=dmR0dmoxbjJkeGhk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://wa.me/919884882516" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h3 class="form-title">Place a Custom Order</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required maxlength="80" autocomplete="name">
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder=" " maxlength="120" autocomplete="email">
+                                <label for="email">Email (optional)</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder=" " required maxlength="20" autocomplete="tel">
+                                <label for="phone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="form-row form-row-item" id="itemRow" hidden>
+                            <div class="form-group">
+                                <select id="orderItem" aria-label="What would you like?">
+                                    <option value="">Something custom (tell us below)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="orderQty" placeholder=" " min="1" max="50" value="1" inputmode="numeric">
+                                <label for="orderQty">Quantity</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-group-static">
+                                <input type="date" id="pickupDate" required>
+                                <label for="pickupDate">Date needed</label>
+                            </div>
+                            <div class="form-group form-group-static">
+                                <input type="time" id="pickupTime" required step="900" value="16:00">
+                                <label for="pickupTime">Time</label>
+                            </div>
+                        </div>
+                        <fieldset class="form-choice">
+                            <legend>How would you like it?</legend>
+                            <label><input type="radio" name="fulfilment" value="collect" checked> Pickup / Cab</label>
+                            <label><input type="radio" name="fulfilment" value="setup"> Set it up at my place</label>
+                        </fieldset>
+                        <div class="form-group" id="addressGroup">
+                            <textarea id="setupAddress" rows="2" placeholder=" " maxlength="300"></textarea>
+                            <label for="setupAddress" id="addressLabel">Your address (optional, for the cab)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="setupNote" placeholder=" " maxlength="300" autocomplete="off">
+                            <label for="setupNote">Landmark (optional)</label>
+                        </div>
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="website">Leave this empty</label>
+                            <input type="text" id="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <select id="orderType">
+                                <option value="" disabled selected>Select Order Type</option>
+                                <option value="birthday">Birthday Cake</option>
+                                <option value="wedding">Wedding Cake</option>
+                                <option value="custom">Custom Design</option>
+                                <option value="macarons">Macaron Box</option>
+                                <option value="pastries">Pastry Platter</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder=" " maxlength="800"></textarea>
+                            <label for="message">Tell us about your dream cake...</label>
+                        </div>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <span>Send Your Order</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
+                            <button type="button" id="orderViaWhatsapp" class="btn btn-whatsapp btn-full">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span>Order via WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="section-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#hero" class="nav-logo" aria-label="La Patisserie Madras Home">
+                            <img src="/brand/logo-round-light.png" alt="La Patisserie Madras" class="nav-logo-img" width="512" height="512">
+                        </a>
+                        <p>Where French elegance meets South Indian soul. Handcrafting moments of sweetness since 2014.</p>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#about">Our Story</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Birthday Cakes</a></li>
+                            <li><a href="#">Wedding Cakes</a></li>
+                            <li><a href="#">French Macarons</a></li>
+                            <li><a href="#">Pastries & Croissants</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Stay Sweet 🍰</h4>
+                        <p>Subscribe for new flavour drops!</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">→</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-container">
+                <p>© 2026 La Patisserie Madras. Baked with ❤️</p>
+                <p class="footer-legal">Privacy Policy · Terms of Service · <a href="/site/photo-credits.html">Photo credits</a> · <a href="/login">Staff login</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageLightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image modal">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Gallery Image Preview" loading="lazy" decoding="async">
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Floating Quick WhatsApp Button -->
+    <a href="https://wa.me/919884882516?text=Hi%20La%20Patisserie%20Madras!%20I'd%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-badge">Chat with us</span>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="/site/script.js?v=20261028l"></script>
+</body>
+</html>
