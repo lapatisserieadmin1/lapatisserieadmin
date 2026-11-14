@@ -231,15 +231,11 @@ do $$ begin
   exception when others then insert into r(check_name,outcome) values ('R19b counter staff cannot delete orders', sqlerrm); end;
 end $$;
 select pg_temp.as_user('00000000-0000-0000-0000-000000000da1');
-do $$ begin
-  begin perform public.delete_order((select v::uuid from ctx where k = 'C'), (select version from public.orders where id = (select v::uuid from ctx where k = 'C')), 'Test');
-    insert into r(check_name,outcome) values ('R19c an order with an advance is not deleted', 'ALLOWED');
-  -- expect: This order has payments or a bill, so it cannot be deleted. (has_money)
-  exception when others then
-    declare h text; begin get stacked diagnostics h = pg_exception_hint;
-    insert into r(check_name,outcome) values ('R19c an order with an advance is not deleted', sqlerrm || ' (' || h || ')'); end;
-  end;
-end $$;
+select public.delete_order((select v::uuid from ctx where k = 'C'), (select version from public.orders where id = (select v::uuid from ctx where k = 'C')), 'Test');
+-- expect: 0 / 0
+insert into r(check_name,outcome) values ('R19c deleting an order with an advance also removes its payment',
+  (select count(*) from public.orders where id = (select v::uuid from ctx where k = 'C')) || ' / ' ||
+  (select count(*) from public.payments where order_id = (select v::uuid from ctx where k = 'C')));
 select public.delete_order((select v::uuid from ctx where k = 'W'), (select version from public.orders where id = (select v::uuid from ctx where k = 'W')), 'Customer called it off');
 reset role;
 -- expect: 0 / 0 / 0 / Customer called it off

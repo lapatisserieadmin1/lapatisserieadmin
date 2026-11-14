@@ -53,8 +53,8 @@ begin
 
   o := public.create_order(gen_random_uuid(), 'CALL', pg_temp.items(), 'Fu One', '9000000911', pg_temp.day(2),
       p_setup_address => 'Ignored street');
-  -- expect: collect / NULL
-  insert into r(check_name,outcome) values ('F3 a collect order stores no address', o.fulfilment || ' / ' || coalesce(o.setup_address, 'NULL'));
+  -- expect: collect / Ignored street
+  insert into r(check_name,outcome) values ('F3 a collect order keeps its supplied address', o.fulfilment || ' / ' || coalesce(o.setup_address, 'NULL'));
 
   begin perform public.create_order(gen_random_uuid(), 'IN_STORE', pg_temp.items(), null, null, null,
       p_fulfilment => 'setup', p_setup_address => '12 Rose Street');
@@ -87,8 +87,8 @@ begin
   exception when others then insert into r(check_name,outcome) values ('F8 changing to set-up needs an address', sqlerrm); end;
 
   o := public.set_fulfilment(s, (select version from public.orders where id = s), 'collect', 'kept?', 'kept?');
-  -- expect: collect / NULL / NULL / setup -> collect
-  insert into r(check_name,outcome) values ('F9 switching to collect clears the address and logs the change',
+  -- expect: collect / kept? / kept? / setup -> collect
+  insert into r(check_name,outcome) values ('F9 switching to collect preserves the address and landmark and logs the change',
     o.fulfilment || ' / ' || coalesce(o.setup_address, 'NULL') || ' / ' || coalesce(o.setup_note, 'NULL') || ' / '
     || (select (data ->> 'from') || ' -> ' || (data ->> 'to') from public.order_events where order_id = s and event_type = 'fulfilment_changed'));
 
